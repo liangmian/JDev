@@ -1,0 +1,20 @@
+package org.liangmian.thread.multithread.communication.example7;
+
+/**
+ * Created by Brian on 2016/4/14.
+ */
+public class ThreadC extends Thread {
+    private Consumer c;
+
+    public ThreadC(Consumer c) {
+        super();
+        this.c = c;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            c.getValue();
+        }
+    }
+}
